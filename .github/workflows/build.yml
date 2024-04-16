@@ -1,0 +1,28 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Instal deps
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+      - name: Build
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: 'build'
+      - name: Deploy to GH Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
