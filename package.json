@@ -1,0 +1,12 @@
+{
+  "name": "cat-says",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "node ./config/esbuild/esbuild.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.2",
+    "esbuild-plugin-copy": "^2.1.1"
+  }
+}

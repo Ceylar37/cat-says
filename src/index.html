@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="layout" id="layout">
+        <img src="assets/cat.png" class="layout__background-img" id="background-img" />
+        <canvas id="canvas" class="layout__canvas" width="512px" height="492px"></canvas>
+        <div class="layout__main layout__main_show" id="main-img-container" style="top: 30px; left: 156px">
+          <img
+            draggable="false"
+            class="layout__main-img"
+            id="main-img"
+            src="assets/cat-says.png"
+            style="width: 200px; height: 200px"
+          />
+          <div class="layout__main__square"></div>
+          <div class="layout__main__square"></div>
+          <div class="layout__main__square"></div>
+          <div class="layout__main__square"></div>
+        </div>
+      </div>
+      <p>
+        <label for="file">Выберите картинку:</label>
+        <input type="file" id="file" />
+      </p>
+      <p>
+        <button id="save">Сохранить</button>
+      </p>
+    </main>
+  </body>
+</html>
